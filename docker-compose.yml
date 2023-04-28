@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: nodejs
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: develop
+    ports:
+      - 8000:8000
+    volumes:  
+      - ./backend/src:/server/src
+    links:
+      - database
+  database:
+    image: mongo:6.0.1
+    restart: unless-stopped
+    hostname: database
+    container_name: database
+    ports:
+      - 27027:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: bengali
+    volumes:
+      - mongo_data:/data/db
+  frontend:
+    container_name: react
+    restart: unless-stopped
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    command: npm install && npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend/src/:/client
+volumes:
+  mongo_data:
+networks:
+  default:
+    name: lab_proxy
+

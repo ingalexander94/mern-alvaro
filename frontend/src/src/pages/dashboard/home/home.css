@@ -1,0 +1,16 @@
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.home p {
+  font-size: 20px;
+}

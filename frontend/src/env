@@ -1,0 +1,2 @@
+REACT_APP_BASE_URL = http://docker-auth.com:8000/api
+REACT_APP_DOMAIN = docker-auth.com

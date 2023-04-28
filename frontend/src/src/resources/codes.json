@@ -1,0 +1,17 @@
+{
+    "MA1100": "The role does not exist or is disabled",
+    "MA1101": "The user already exists",
+    "MA1102": "The user does not exist",
+    "MA1103": "The user is inactive",
+    "MA1104": "Password is incorrect",
+    "MA1105": "Activate the account from your email",
+    "MT1100": "You do not have permissions to perform this action",
+    "MT1101": "You do not have permissions to perform this action",
+    "MR1100": "The role already exists",
+    "MR1101": "The role does not exist",
+    "MU1100": "You have not selected the avatar",
+    "MU1101": "An error occurred while trying to upload the avatar",
+    "MU1102": "An error occurred while trying to delete the avatar",
+    "MU1103": "You have not uploaded an avatar",
+    "MU1104": "The file size exceeds the 1MB limit"
+}

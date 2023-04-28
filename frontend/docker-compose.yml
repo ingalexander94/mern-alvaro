@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: react
+    restart: unless-stopped
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src/:/client
